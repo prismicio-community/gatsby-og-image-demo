@@ -1,54 +1,110 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+<!--
 
-## 🚀 Quick start
+TODO: Go through all "TODO" comments in the project
 
-1.  **Create a Gatsby site.**
+TODO: Replace all on all files (README.md, CONTRIBUTING.md, bug_report.md, package.json):
+- package_name
+- package_description
+- github_org_slash_github_repo
+- github_repo
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+-->
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+# package_name
 
-2.  **Start developing.**
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
+[![Codecov][codecov-src]][codecov-href]
+[![Conventional Commits][conventional-commits-src]][conventional-commits-href]
+[![License][license-src]][license-href]
 
-    Navigate into your new site’s directory and start it up.
+<!-- TODO: Replacing link to Prismic with [Prismic][prismic] is useful here -->
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+package_description.
 
-3.  **Open the code and start customizing!**
+<!--
 
-    Your site is now running at http://localhost:8000!
+TODO: Create a small list of package features:
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+- 🤔 &nbsp;A useful feature;
+- 🥴 &nbsp;Another useful feature;
+- 🙃 &nbsp;A final useful feature.
 
-4.  **Learn more**
+Non-breaking space: &nbsp; are here on purpose to fix emoji rendering on certain systems.
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+-->
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Install
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```bash
+npm install package_name
+```
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Documentation
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+To discover what's new on this package check out [the changelog][changelog]. For full documentation, visit the [official Prismic documentation][prismic-docs].
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Contributing
 
-## 🚀 Quick start (Gatsby Cloud)
+Whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you as part of the Prismic developer community!
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+**Asking a question**: [Open a new topic][forum-question] on our community forum explaining what you want to achieve / your question. Our support team will get back to you shortly.
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+**Reporting a bug**: [Open an issue][repo-bug-report] explaining your application's setup and the bug you're encountering.
+
+**Suggesting an improvement**: [Open an issue][repo-feature-request] explaining your improvement or feature so we can discuss and learn more.
+
+**Submitting code changes**: For small fixes, feel free to [open a pull request][repo-pull-requests] with a description of your changes. For large changes, please first [open an issue][repo-feature-request] so we can discuss if and how the changes should be implemented.
+
+For more clarity on this project and its structure you can also check out the detailed [CONTRIBUTING.md][contributing] document.
+
+## License
+
+```
+   Copyright 2013-2021 Prismic <contact@prismic.io> (https://prismic.io)
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+```
+
+<!-- Links -->
+
+[prismic]: https://prismic.io
+
+<!-- TODO: Replace link with a more useful one if available -->
+
+[prismic-docs]: https://prismic.io/docs
+[changelog]: ./CHANGELOG.md
+[contributing]: ./CONTRIBUTING.md
+
+<!-- TODO: Replace link with a more useful one if available -->
+
+[forum-question]: https://community.prismic.io
+[repo-bug-report]: https://github.com/github_org_slash_github_repo/issues/new?assignees=&labels=bug&template=bug_report.md&title=
+[repo-feature-request]: https://github.com/github_org_slash_github_repo/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
+[repo-pull-requests]: https://github.com/github_org_slash_github_repo/pulls
+
+<!-- Badges -->
+
+[npm-version-src]: https://img.shields.io/npm/v/package_name/latest.svg
+[npm-version-href]: https://npmjs.com/package/package_name
+[npm-downloads-src]: https://img.shields.io/npm/dm/package_name.svg
+[npm-downloads-href]: https://npmjs.com/package/package_name
+[github-actions-ci-src]: https://github.com/github_org_slash_github_repo/workflows/ci/badge.svg
+[github-actions-ci-href]: https://github.com/github_org_slash_github_repo/actions?query=workflow%3Aci
+[codecov-src]: https://img.shields.io/codecov/c/github/github_org_slash_github_repo.svg
+[codecov-href]: https://codecov.io/gh/github_org_slash_github_repo
+[conventional-commits-src]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
+[conventional-commits-href]: https://conventionalcommits.org
+[license-src]: https://img.shields.io/npm/l/package_name.svg
+[license-href]: https://npmjs.com/package/package_name

@@ -1,22 +1,49 @@
 {
-  "name": "gatsby-og-image-test",
-  "version": "1.0.0",
-  "private": true,
-  "description": "gatsby-og-image-test",
-  "author": "Angelo Ashmore",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "gatsby": "^3.13.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  }
+	"name": "gatsby-og-image-test",
+	"version": "1.0.0",
+	"private": true,
+	"description": "gatsby-og-image-test",
+	"author": "Angelo Ashmore",
+	"keywords": [
+		"gatsby"
+	],
+	"scripts": {
+		"develop": "gatsby develop",
+		"start": "gatsby develop",
+		"build": "gatsby build",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean",
+		"gen": "graphql-codegen",
+		"format": "prettier --write ."
+	},
+	"dependencies": {
+		"@fontsource/inter": "^4.5.0",
+		"@primer/octicons-react": "^15.2.0",
+		"gatsby": "^4.0.0-next.0",
+		"gatsby-plugin-open-graph-images": "^0.1.7",
+		"gatsby-plugin-postcss": "^5.0.0-zz-next.1",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-helmet": "^6.1.0"
+	},
+	"devDependencies": {
+		"@graphql-codegen/cli": "^2.2.0",
+		"@graphql-codegen/typescript": "^2.2.2",
+		"@graphql-codegen/typescript-operations": "^2.1.4",
+		"@tailwindcss/aspect-ratio": "^0.2.1",
+		"@themosaad/tailwindcss-capsize": "^1.0.0",
+		"@typescript-eslint/eslint-plugin": "^4.31.2",
+		"@typescript-eslint/parser": "^4.31.2",
+		"autoprefixer": "^10.3.5",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-tsdoc": "^0.2.14",
+		"gatsby-plugin-react-helmet": "^5.0.0-zz-next.1",
+		"postcss": "^8.3.7",
+		"prettier": "^2.4.1",
+		"prettier-plugin-jsdoc": "^0.3.24",
+		"tailwindcss": "^2.2.15",
+		"typescript": "^4.4.3"
+	}
 }
