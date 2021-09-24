@@ -82,7 +82,11 @@ const OpenGraphImageTemplate = ({
 								value={repository.discussions.totalCount}
 							/>
 						)}
-						<MetadataItem icon={StarIcon} label="Stars" value="8k" />
+						<MetadataItem
+							icon={StarIcon}
+							label="Stars"
+							value={repository.stargazerCount}
+						/>
 						<MetadataItem
 							icon={RepoForkedIcon}
 							label="Forks"
