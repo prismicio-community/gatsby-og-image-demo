@@ -18,7 +18,6 @@ module.exports = {
 				headers: {
 					Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
 				},
-				batch: true,
 			},
 		},
 	],

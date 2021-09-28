@@ -20,7 +20,7 @@ type MetadataItemProps = {
 const MetadataItem = ({ icon: Icon, label, value }: MetadataItemProps) => {
 	return (
 		<div className="flex mr-12 last:mr-0">
-			<Icon size="medium" className="col-span-2 text-gray-500 mr-4" />
+			<Icon size="medium" className="mr-4 text-gray-500 col-span-2" />
 			<div className="flex flex-col-reverse pt-1">
 				<dt className="font-sans text-2xl text-gray-500">{label}</dt>
 				<dd className="mb-5 font-sans text-3xl">{value}</dd>
@@ -42,7 +42,7 @@ const OpenGraphImageTemplate = ({
 	return (
 		<div className="min-h-screen bg-black">
 			<div
-				className="flex flex-col text-gray-800 bg-white ring ring-red-500"
+				className="relative flex flex-col text-gray-800 bg-white ring ring-red-500 "
 				style={{ width: 1200, height: 600 }}
 			>
 				<div className="flex flex-col flex-grow pl-20 pr-20 pt-28 pb-14">
@@ -134,7 +134,7 @@ export const query = graphql`
 				}
 				description
 				stargazerCount
-				issues {
+				issues(states: OPEN) {
 					totalCount
 				}
 				forkCount
