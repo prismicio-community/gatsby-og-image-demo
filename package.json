@@ -1,8 +1,8 @@
 {
-	"name": "gatsby-og-image-test",
+	"name": "gatsby-og-image-demo",
 	"version": "1.0.0",
 	"private": true,
-	"description": "gatsby-og-image-test",
+	"description": "gatsby-og-image-demo",
 	"author": "Angelo Ashmore",
 	"keywords": [
 		"gatsby"

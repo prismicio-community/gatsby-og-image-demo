@@ -8,7 +8,10 @@ exports.createPages = async ({ actions, graphql }) => {
 		query {
 			github {
 				organization(login: "prismicio") {
-					repositories(first: 10) {
+					repositories(
+						first: 10
+						orderBy: { field: STARGAZERS, direction: DESC }
+					) {
 						nodes {
 							name
 							owner {
@@ -35,7 +38,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
 	for (const repository of data.github.organization.repositories.nodes) {
 		createPage({
-			path: `/${repository.owner.login}/${repository.name}`,
+			path: `/github/${repository.owner.login}/${repository.name}`,
 			component: path.resolve("./src/templates/github-repository.tsx"),
 			context: {
 				repositoryOwner: repository.owner.login,
@@ -44,7 +47,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		});
 
 		createOpenGraphImage(createPage, {
-			path: `/${repository.owner.login}/${repository.name}/og-image.png`,
+			path: `/github/${repository.owner.login}/${repository.name}/og-image.png`,
 			component: path.resolve("./src/templates/github-repository.og-image.tsx"),
 			size: {
 				width: 1200,

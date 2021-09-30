@@ -2,8 +2,8 @@ require("dotenv").config();
 
 module.exports = {
 	siteMetadata: {
-		siteUrl: "https://www.yourdomain.tld",
-		title: "gatsby-og-image-test",
+		siteUrl: "https://gatsby-og-image-demo.netlify.app",
+		title: "gatsby-og-image-demo",
 	},
 	plugins: [
 		"gatsby-plugin-postcss",

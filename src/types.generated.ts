@@ -38303,6 +38303,26 @@ export type UseSiteMetadataQuery = {
 	site?: Maybe<{ siteMetadata?: Maybe<{ siteUrl?: Maybe<string> }> }>;
 };
 
+export type IndexPageQueryVariables = Exact<{ [key: string]: never }>;
+
+export type IndexPageQuery = {
+	github: {
+		organization?: Maybe<{
+			repositories: {
+				nodes?: Maybe<
+					Array<
+						Maybe<{
+							name: string;
+							owner: { login: string } | { login: string };
+						}>
+					>
+				>;
+			};
+		}>;
+	};
+	allFile: { nodes: Array<{ name: string }> };
+};
+
 export type DevtoArticleOpenGraphImageQueryVariables = Exact<{
 	id: Scalars["String"];
 }>;
