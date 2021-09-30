@@ -9,6 +9,14 @@ module.exports = {
 		"gatsby-plugin-postcss",
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-open-graph-images",
+		"gatsby-transformer-remark",
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				name: "blog",
+				path: `${__dirname}/src/blog`,
+			},
+		},
 		{
 			resolve: "gatsby-source-graphql",
 			options: {

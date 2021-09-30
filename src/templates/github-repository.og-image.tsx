@@ -9,7 +9,7 @@ import {
 	MarkGithubIcon,
 	OcticonProps,
 } from "@primer/octicons-react";
-import { IndexOpenGraphImageQuery } from "../types.generated";
+import { GitHubRepositoryOpenGraphImageQuery } from "../types.generated";
 
 type MetadataItemProps = {
 	icon: React.ComponentType<OcticonProps>;
@@ -29,11 +29,12 @@ const MetadataItem = ({ icon: Icon, label, value }: MetadataItemProps) => {
 	);
 };
 
-type OpenGraphImageTemplateProps = PageProps<IndexOpenGraphImageQuery>;
+type GitHubOpenGraphImageTemplateProps =
+	PageProps<GitHubRepositoryOpenGraphImageQuery>;
 
-const OpenGraphImageTemplate = ({
+const GitHubOpenGraphImageTemplate = ({
 	data,
-}: OpenGraphImageTemplateProps): JSX.Element => {
+}: GitHubOpenGraphImageTemplateProps): JSX.Element => {
 	const repository = data.github.repository;
 	if (!repository) {
 		throw new Error("Repository was not found");
@@ -121,10 +122,13 @@ const OpenGraphImageTemplate = ({
 	);
 };
 
-export default OpenGraphImageTemplate;
+export default GitHubOpenGraphImageTemplate;
 
 export const query = graphql`
-	query ($repositoryOwner: String!, $repositoryName: String!) {
+	query GitHubRepositoryOpenGraphImage(
+		$repositoryOwner: String!
+		$repositoryName: String!
+	) {
 		github {
 			repository(owner: $repositoryOwner, name: $repositoryName) {
 				name

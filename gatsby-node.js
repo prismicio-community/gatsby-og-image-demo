@@ -18,13 +18,25 @@ exports.createPages = async ({ actions, graphql }) => {
 					}
 				}
 			}
+			allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
+				nodes {
+					id
+					name
+					childMarkdownRemark {
+						frontmatter {
+							title
+							author
+						}
+					}
+				}
+			}
 		}
 	`);
 
 	for (const repository of data.github.organization.repositories.nodes) {
 		createPage({
 			path: `/${repository.owner.login}/${repository.name}`,
-			component: path.resolve("./src/templates/repository.js"),
+			component: path.resolve("./src/templates/github-repository.tsx"),
 			context: {
 				repositoryOwner: repository.owner.login,
 				repositoryName: repository.name,
@@ -33,7 +45,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
 		createOpenGraphImage(createPage, {
 			path: `/${repository.owner.login}/${repository.name}/og-image.png`,
-			component: path.resolve("./src/templates/repository.og-image.js"),
+			component: path.resolve("./src/templates/github-repository.og-image.tsx"),
 			size: {
 				width: 1200,
 				height: 600,
@@ -44,12 +56,26 @@ exports.createPages = async ({ actions, graphql }) => {
 			},
 		});
 	}
+
+	for (const blogFile of data.allFile.nodes) {
+		createPage({
+			path: `/blog/${blogFile.name}`,
+			component: path.resolve("./src/templates/devto-article.tsx"),
+			context: {
+				id: blogFile.id,
+			},
+		});
+
+		createOpenGraphImage(createPage, {
+			path: `/blog/${blogFile.name}/og-image.png`,
+			component: path.resolve("./src/templates/devto-article.og-image.tsx"),
+			size: {
+				width: 1200,
+				height: 600,
+			},
+			context: {
+				id: blogFile.id,
+			},
+		});
+	}
 };
-
-
-
-
-
-
-
-

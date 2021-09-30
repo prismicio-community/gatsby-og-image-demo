@@ -22,7 +22,9 @@
 		"gatsby": "^3.14.0",
 		"gatsby-plugin-open-graph-images": "^0.1.7",
 		"gatsby-plugin-postcss": "^4.14.0",
+		"gatsby-source-filesystem": "^3.14.0",
 		"gatsby-source-graphql": "^3.14.0",
+		"gatsby-transformer-remark": "^4.11.0",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"react-helmet": "^6.1.0"
