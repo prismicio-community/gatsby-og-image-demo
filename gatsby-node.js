@@ -59,7 +59,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
 	for (const blogFile of data.allFile.nodes) {
 		createPage({
-			path: `/blog/${blogFile.name}`,
+			path: `/devto/${blogFile.name}`,
 			component: path.resolve("./src/templates/devto-article.tsx"),
 			context: {
 				id: blogFile.id,
@@ -67,8 +67,30 @@ exports.createPages = async ({ actions, graphql }) => {
 		});
 
 		createOpenGraphImage(createPage, {
-			path: `/blog/${blogFile.name}/og-image.png`,
+			path: `/devto/${blogFile.name}/og-image.png`,
 			component: path.resolve("./src/templates/devto-article.og-image.tsx"),
+			size: {
+				width: 1200,
+				height: 600,
+			},
+			context: {
+				id: blogFile.id,
+			},
+		});
+	}
+
+	for (const blogFile of data.allFile.nodes) {
+		createPage({
+			path: `/gatsby/${blogFile.name}`,
+			component: path.resolve("./src/templates/gatsby-article.tsx"),
+			context: {
+				id: blogFile.id,
+			},
+		});
+
+		createOpenGraphImage(createPage, {
+			path: `/gatsby/${blogFile.name}/og-image.png`,
+			component: path.resolve("./src/templates/gatsby-article.og-image.tsx"),
 			size: {
 				width: 1200,
 				height: 600,

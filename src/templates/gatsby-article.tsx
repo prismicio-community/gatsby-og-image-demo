@@ -2,17 +2,20 @@ import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 import OpenGraphImage from "gatsby-plugin-open-graph-images/OpenGraphImage.jsx";
 
-import { GitHubRepositoryTemplateQuery } from "../types.generated";
+import { GatsbyArticleQuery } from "../types.generated";
 import { useSiteMetadata } from "../hooks/useSiteMetadata";
 import { Layout } from "../components/Layout";
 
+type RepositoryTemplateProps = PageProps<GatsbyArticleQuery>;
+
 export default function RepositoryTemplate({
 	data,
-}: PageProps<GitHubRepositoryTemplateQuery>): JSX.Element {
-	const repository = data.github.repository;
+}: RepositoryTemplateProps): JSX.Element {
+	const file = data.file;
+	const frontmatter = file?.childMarkdownRemark?.frontmatter;
 
 	const { siteUrl } = useSiteMetadata();
-	const ogImagePath = `${siteUrl}/github/${repository?.owner.login}/${repository?.name}/og-image.png`;
+	const ogImagePath = `${siteUrl}/gatsby/${file?.name}/og-image.png`;
 
 	return (
 		<Layout>
@@ -25,12 +28,10 @@ export default function RepositoryTemplate({
 			/>
 			<div className="grid gap-4 p-8 mx-auto max-w-xl">
 				<h1>
-					This page for the GitHub repository{" "}
-					<strong>
-						{repository?.owner.login}/{repository?.name}
-					</strong>{" "}
-					has an Open Graph image! When it is shared on social media platforms,
-					like Twitter and Facebook, a bespoke image will be shown.
+					This page for a mock Gatsby article named{" "}
+					<strong>{frontmatter?.title}</strong> has an Open Graph image! When it
+					is shared on social media platforms, like Twitter and Facebook, a
+					bespoke image will be shown.
 				</h1>
 				<p>
 					<a href={ogImagePath} className="text-blue-600 underline">
@@ -47,15 +48,12 @@ export default function RepositoryTemplate({
 }
 
 export const query = graphql`
-	query GitHubRepositoryTemplate(
-		$repositoryOwner: String!
-		$repositoryName: String!
-	) {
-		github {
-			repository(owner: $repositoryOwner, name: $repositoryName) {
-				name
-				owner {
-					login
+	query GatsbyArticle($id: String!) {
+		file(id: { eq: $id }) {
+			name
+			childMarkdownRemark {
+				frontmatter {
+					title
 				}
 			}
 		}
