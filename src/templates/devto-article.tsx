@@ -21,6 +21,7 @@ export default function RepositoryTemplate({
 	return (
 		<main>
 			<Helmet>
+				<meta property="og:title" content={frontmatter?.title} />
 				<meta name="twitter:card" content="summary_large_image" />
 			</Helmet>
 			<OpenGraphImage
