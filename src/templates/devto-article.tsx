@@ -15,7 +15,7 @@ export default function RepositoryTemplate({
 	const frontmatter = file?.childMarkdownRemark?.frontmatter;
 
 	const { siteUrl } = useSiteMetadata();
-	const localOgImagePath = `/__generated/devto${file?.name}og-image.png`;
+	const localOgImagePath = `/__generated/devto${file?.name}og-image.png/`;
 	const ogImagePath = `${siteUrl}/devto/${file?.name}/og-image.png`;
 
 	return (

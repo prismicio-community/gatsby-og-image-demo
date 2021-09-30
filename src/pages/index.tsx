@@ -22,9 +22,9 @@ const IndexPage = ({ data }: IndexPageProps) => {
 				{repositories.map(
 					(repository) =>
 						repository && (
-							<li key={`/github/${repository.owner.login}/${repository.name}`}>
+							<li key={`/github/${repository.owner.login}/${repository.name}/`}>
 								<Link
-									to={`/github/${repository.owner.login}/${repository.name}`}
+									to={`/github/${repository.owner.login}/${repository.name}/`}
 									className="text-blue-600 underline"
 								>
 									{repository.owner.login}/{repository.name}
@@ -40,7 +40,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
 				{blogFiles.map((blogFile) => (
 					<li key={blogFile.name}>
 						<Link
-							to={`/devto/${blogFile.name}`}
+							to={`/devto/${blogFile.name}/`}
 							className="text-blue-600 underline"
 						>
 							{blogFile.name}
@@ -55,7 +55,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
 				{blogFiles.map((blogFile) => (
 					<li key={blogFile.name}>
 						<Link
-							to={`/gatsby/${blogFile.name}`}
+							to={`/gatsby/${blogFile.name}/`}
 							className="text-blue-600 underline"
 						>
 							{blogFile.name}

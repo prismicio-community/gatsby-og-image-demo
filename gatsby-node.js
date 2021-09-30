@@ -38,7 +38,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
 	for (const repository of data.github.organization.repositories.nodes) {
 		createPage({
-			path: `/github/${repository.owner.login}/${repository.name}`,
+			path: `/github/${repository.owner.login}/${repository.name}/`,
 			component: path.resolve("./src/templates/github-repository.tsx"),
 			context: {
 				repositoryOwner: repository.owner.login,
@@ -62,7 +62,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
 	for (const blogFile of data.allFile.nodes) {
 		createPage({
-			path: `/devto/${blogFile.name}`,
+			path: `/devto/${blogFile.name}/`,
 			component: path.resolve("./src/templates/devto-article.tsx"),
 			context: {
 				id: blogFile.id,
@@ -84,7 +84,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
 	for (const blogFile of data.allFile.nodes) {
 		createPage({
-			path: `/gatsby/${blogFile.name}`,
+			path: `/gatsby/${blogFile.name}/`,
 			component: path.resolve("./src/templates/gatsby-article.tsx"),
 			context: {
 				id: blogFile.id,

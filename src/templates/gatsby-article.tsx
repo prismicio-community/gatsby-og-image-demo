@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import { Link, graphql, PageProps } from "gatsby";
 import OpenGraphImage from "gatsby-plugin-open-graph-images/OpenGraphImage.jsx";
 
@@ -14,11 +15,15 @@ export default function RepositoryTemplate({
 	const frontmatter = file?.childMarkdownRemark?.frontmatter;
 
 	const { siteUrl } = useSiteMetadata();
-	const localOgImagePath = `/__generated/gatsby${file?.name}og-image.png`;
+	const localOgImagePath = `/__generated/gatsby${file?.name}og-image.png/`;
 	const ogImagePath = `${siteUrl}/gatsby/${file?.name}/og-image.png`;
 
 	return (
 		<main>
+			<Helmet>
+				<meta property="og:title" content={frontmatter?.title} />
+				<meta name="twitter:card" content="summary_large_image" />
+			</Helmet>
 			<OpenGraphImage
 				path={ogImagePath}
 				size={{
