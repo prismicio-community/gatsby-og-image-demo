@@ -6,6 +6,8 @@ When you share a link on social media platforms that support Open Graph, like Tw
 
 This repository is a companion to one of four talks shown during [Prismic][prismic]'s **Gatsby 4×4** presentation at [Jamstack Conf 2021][jamstackconf].
 
+![Gatsby 4×4 - How to generate social media card images with React and Tailwind to look cool on Twitter and impress people you don't even know](./poster.png)
+
 ## How to try this yourself
 
 1. **Create a GitHub personal access token** ([see instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))
