@@ -4,7 +4,7 @@ This repository contains a few examples of how Gatsby can be used to generate [O
 
 When you share a link on social media platforms that support Open Graph, like Twitter, an image can be displayed alongside the page's title and description. Gatsby can automatically generate these images for you using your own React template.
 
-This repository is a companion to one of four talks shown during **[Prismic][prismic]'s Gatsby 4×4** presentation at [Jamstack Conf 2021][jamstackconf].
+This repository is a companion to one of four talks shown during [Prismic][prismic]'s **Gatsby 4×4** presentation at [Jamstack Conf 2021][jamstackconf].
 
 ## How to try this yourself
 
@@ -14,7 +14,7 @@ This repository is a companion to one of four talks shown during **[Prismic][pri
 2. **Deploy to Netlify**<br/>
    Click the Deploy to Netlify button below. This will create a site on Netlify and clone the repository to your own GitHub account. You will be asked for your GitHub personal access token to set as an environment variable.
 
-   [![Deploy to Netlify][https://www.netlify.com/img/deploy/button.svg]](https://app.netlify.com/start/deploy?repository=https://github.com/prismicio-community/gatsby-og-image-demo)
+   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/prismicio-community/gatsby-og-image-demo)
 
 3. **Update your `siteUrl` in `gatsby-node.js`**
    Once your Netlify site is generated, edit your GitHub repository's `gatsby-node.js` to include your own Netlify URL. This URL will be used for the Open Graph image URL. You can make this change directly on GitHub using the edit button.
