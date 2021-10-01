@@ -10,6 +10,8 @@ This repository is a companion to one of four talks shown during [Prismic][prism
 
 ## How to try this yourself
 
+**Live Demo**: <https://gatsby-og-image-demo.netlify.app>
+
 1. **Create a GitHub personal access token** ([see instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))
 
    The demo uses the GitHub API to generate repository pages.
