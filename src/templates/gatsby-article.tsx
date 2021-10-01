@@ -1,3 +1,7 @@
+/**
+ * This template is used for blog articles with a Gatsby Blog-like og:image.
+ */
+
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import { Link, graphql, PageProps } from "gatsby";

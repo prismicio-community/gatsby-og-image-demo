@@ -1,110 +1,60 @@
-<!--
+# Gatsby 4×4 - Open Graph image demo
 
-TODO: Go through all "TODO" comments in the project
+This repository contains a few examples of how Gatsby can be used to generate [Open Graph][og] images using [React][react] and [Tailwind][tailwind].
 
-TODO: Replace all on all files (README.md, CONTRIBUTING.md, bug_report.md, package.json):
-- package_name
-- package_description
-- github_org_slash_github_repo
-- github_repo
+When you share a link on social media platforms that support Open Graph, like Twitter, an image can be displayed alongside the page's title and description. Gatsby can automatically generate these images for you using your own React template.
 
--->
+This repository is a companion to one of four talks shown during **[Prismic][prismic]'s Gatsby 4×4** presentation at [Jamstack Conf 2021][jamstackconf].
 
-# package_name
+## How to try this yourself
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
-[![Codecov][codecov-src]][codecov-href]
-[![Conventional Commits][conventional-commits-src]][conventional-commits-href]
-[![License][license-src]][license-href]
+1. **Create a GitHub personal access token** ([see instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))<br/>
+   The demo uses the GitHub API to generate repository pages.
 
-<!-- TODO: Replacing link to Prismic with [Prismic][prismic] is useful here -->
+2. **Deploy to Netlify**<br/>
+   Click the Deploy to Netlify button below. This will create a site on Netlify and clone the repository to your own GitHub account. You will be asked for your GitHub personal access token to set as an environment variable.
 
-package_description.
+   [![Deploy to Netlify][https://www.netlify.com/img/deploy/button.svg]](https://app.netlify.com/start/deploy?repository=https://github.com/prismicio-community/gatsby-og-image-demo)
 
-<!--
+3. **Update your `siteUrl` in `gatsby-node.js`**
+   Once your Netlify site is generated, edit your GitHub repository's `gatsby-node.js` to include your own Netlify URL. This URL will be used for the Open Graph image URL. You can make this change directly on GitHub using the edit button.
 
-TODO: Create a small list of package features:
+If you want to make changes to the demo, clone your new repository to your machine and edit the code.
 
-- 🤔 &nbsp;A useful feature;
-- 🥴 &nbsp;Another useful feature;
-- 🙃 &nbsp;A final useful feature.
+1. Clone your repository.
+2. Start the Gatsby development server.
 
-Non-breaking space: &nbsp; are here on purpose to fix emoji rendering on certain systems.
+   ```sh
+   npm run develop
+   ```
 
--->
+3. Edit the templates. Each file includes a short description of its purpose.
+4. When you want to deploy your changes, commit your code. Netlify will rebuild your site once you push.
 
-## Install
-
-```bash
-npm install package_name
-```
-
-## Documentation
-
-To discover what's new on this package check out [the changelog][changelog]. For full documentation, visit the [official Prismic documentation][prismic-docs].
-
-## Contributing
-
-Whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you as part of the Prismic developer community!
-
-**Asking a question**: [Open a new topic][forum-question] on our community forum explaining what you want to achieve / your question. Our support team will get back to you shortly.
-
-**Reporting a bug**: [Open an issue][repo-bug-report] explaining your application's setup and the bug you're encountering.
-
-**Suggesting an improvement**: [Open an issue][repo-feature-request] explaining your improvement or feature so we can discuss and learn more.
-
-**Submitting code changes**: For small fixes, feel free to [open a pull request][repo-pull-requests] with a description of your changes. For large changes, please first [open an issue][repo-feature-request] so we can discuss if and how the changes should be implemented.
-
-For more clarity on this project and its structure you can also check out the detailed [CONTRIBUTING.md][contributing] document.
+Have fun generating your own Open Graph images! 😊
 
 ## License
 
 ```
-   Copyright 2013-2021 Prismic <contact@prismic.io> (https://prismic.io)
+Copyright 2013-2021 Prismic <contact@prismic.io> (https://prismic.io)
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 ```
 
 <!-- Links -->
 
 [prismic]: https://prismic.io
-
-<!-- TODO: Replace link with a more useful one if available -->
-
-[prismic-docs]: https://prismic.io/docs
-[changelog]: ./CHANGELOG.md
-[contributing]: ./CONTRIBUTING.md
-
-<!-- TODO: Replace link with a more useful one if available -->
-
-[forum-question]: https://community.prismic.io
-[repo-bug-report]: https://github.com/github_org_slash_github_repo/issues/new?assignees=&labels=bug&template=bug_report.md&title=
-[repo-feature-request]: https://github.com/github_org_slash_github_repo/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
-[repo-pull-requests]: https://github.com/github_org_slash_github_repo/pulls
-
-<!-- Badges -->
-
-[npm-version-src]: https://img.shields.io/npm/v/package_name/latest.svg
-[npm-version-href]: https://npmjs.com/package/package_name
-[npm-downloads-src]: https://img.shields.io/npm/dm/package_name.svg
-[npm-downloads-href]: https://npmjs.com/package/package_name
-[github-actions-ci-src]: https://github.com/github_org_slash_github_repo/workflows/ci/badge.svg
-[github-actions-ci-href]: https://github.com/github_org_slash_github_repo/actions?query=workflow%3Aci
-[codecov-src]: https://img.shields.io/codecov/c/github/github_org_slash_github_repo.svg
-[codecov-href]: https://codecov.io/gh/github_org_slash_github_repo
-[conventional-commits-src]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
-[conventional-commits-href]: https://conventionalcommits.org
-[license-src]: https://img.shields.io/npm/l/package_name.svg
-[license-href]: https://npmjs.com/package/package_name
+[og]: https://ogp.me/
+[jamstackconf]: https://jamstackconf.com/
+[react]: https://reactjs.org/
+[tailwind]: https://tailwindcss.com/

@@ -1,0 +1,2 @@
+[template.environment]
+  GITHUB_TOKEN = "change me to a GitHub token (learn how: https://bit.ly/3oiOClH)"

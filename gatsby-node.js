@@ -1,9 +1,15 @@
+/**
+ * This file queries for content and generates pages. For each generated page,
+ * an Open Graph image is also generated using `gatsby-plugin-open-graph-images`.
+ */
+
 const path = require("path");
 const { createOpenGraphImage } = require("gatsby-plugin-open-graph-images");
 
 exports.createPages = async ({ actions, graphql }) => {
 	const { createPage } = actions;
 
+	// Query for data from GitHub and our local Markdown files.
 	const { data } = await graphql(`
 		query {
 			github {
@@ -36,6 +42,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		}
 	`);
 
+	// Create pages for each GitHub repository along with its Open Graph image.
 	for (const repository of data.github.organization.repositories.nodes) {
 		createPage({
 			path: `/github/${repository.owner.login}/${repository.name}/`,
@@ -60,6 +67,8 @@ exports.createPages = async ({ actions, graphql }) => {
 		});
 	}
 
+	// Create pages for each blog post along with its Open Graph image.
+	// These Open Graph images will appear like DEV Community's images.
 	for (const blogFile of data.allFile.nodes) {
 		createPage({
 			path: `/devto/${blogFile.name}/`,
@@ -82,6 +91,8 @@ exports.createPages = async ({ actions, graphql }) => {
 		});
 	}
 
+	// Create pages for each blog post along with its Open Graph image.
+	// These Open Graph images will appear like Gatsby's Blog images.
 	for (const blogFile of data.allFile.nodes) {
 		createPage({
 			path: `/gatsby/${blogFile.name}/`,

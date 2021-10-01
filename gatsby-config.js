@@ -2,14 +2,15 @@ require("dotenv").config();
 
 module.exports = {
 	siteMetadata: {
+		// The deployed site's URL. This will be used for our Open Graph image URLs.
 		siteUrl: "https://gatsby-og-image-demo.netlify.app",
 		title: "gatsby-og-image-demo",
 	},
 	plugins: [
-		"gatsby-plugin-postcss",
-		"gatsby-plugin-react-helmet",
+		// This plugin generates Open Graph images created in `gatsby-node.js`.
 		"gatsby-plugin-open-graph-images",
-		"gatsby-transformer-remark",
+
+		// The following plugins allow us to query GitHub and our local Markdown files.
 		{
 			resolve: "gatsby-source-filesystem",
 			options: {
@@ -28,5 +29,11 @@ module.exports = {
 				},
 			},
 		},
+
+		// The following plugins setup Gatsby for PostCSS, setting <head> elements,
+		// and converting Markdown files to HTML.
+		"gatsby-plugin-postcss",
+		"gatsby-plugin-react-helmet",
+		"gatsby-transformer-remark",
 	],
 };

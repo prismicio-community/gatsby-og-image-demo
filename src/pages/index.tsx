@@ -1,3 +1,7 @@
+/**
+ * This page lists all the sample pages with a generated og:image for you to test.
+ */
+
 import * as React from "react";
 import { graphql, PageProps, Link } from "gatsby";
 
@@ -5,7 +9,7 @@ import { IndexPageQuery } from "../types.generated";
 
 type IndexPageProps = PageProps<IndexPageQuery>;
 
-const IndexPage = ({ data }: IndexPageProps) => {
+const IndexPage = ({ data }: IndexPageProps): JSX.Element => {
 	const repositories = data.github.organization?.repositories.nodes;
 	if (!repositories) {
 		throw new Error("Repositories were not found");

@@ -1,3 +1,8 @@
+/**
+ * This template is used to generate an og:image for a blog post. It looks like
+ * the actual dev.to og:image for articles.
+ */
+
 import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 

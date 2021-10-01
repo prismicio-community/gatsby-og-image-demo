@@ -1,3 +1,8 @@
+/**
+ * This template is used to generate an og:image for a GitHub repository. It
+ * looks like the actual github.com og:image for repositories.
+ */
+
 import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 import {
