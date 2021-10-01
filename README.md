@@ -1,6 +1,6 @@
 # Gatsby 4×4 - Open Graph image demo
 
-This repository contains a few examples of how Gatsby can be used to generate [Open Graph][og] images using [React][react] and [Tailwind][tailwind].
+This repository contains a few examples of how Gatsby can be used to generate [Open Graph][og] images using [React][react], [Tailwind][tailwind], and [`gatsby-plugin-open-graph-images`][gatsby-plugin-open-graph-images].
 
 When you share a link on social media platforms that support Open Graph, like Twitter, an image can be displayed alongside the page's title and description. Gatsby can automatically generate these images for you using your own React template.
 
@@ -75,3 +75,4 @@ limitations under the License.
 [jamstackconf]: https://jamstackconf.com/
 [react]: https://reactjs.org/
 [tailwind]: https://tailwindcss.com/
+[gatsby-plugin-open-graph-images]: https://github.com/squer-solutions/gatsby-plugin-open-graph-images
