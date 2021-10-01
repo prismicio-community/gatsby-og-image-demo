@@ -12,12 +12,16 @@ This repository is a companion to one of four talks shown during [Prismic][prism
    The demo uses the GitHub API to generate repository pages.
 
 2. **Deploy to Netlify**<br/>
-   Click the Deploy to Netlify button below. This will create a site on Netlify and clone the repository to your own GitHub account. You will be asked for your GitHub personal access token to set as an environment variable.
+   Click the Deploy to Netlify button below.
 
    [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/prismicio-community/gatsby-og-image-demo)
 
-3. **Update your `siteUrl` in `gatsby-node.js`**
-   Once your Netlify site is generated, edit your GitHub repository's `gatsby-node.js` to include your own Netlify URL. This URL will be used for the Open Graph image URL. You can make this change directly on GitHub using the edit button.
+   This will create a site on Netlify and clone the repository to your own GitHub account. You will be asked for your GitHub personal access token to set as an environment variable.
+
+3. **Update your `siteUrl` in `gatsby-node.js`**<br/>
+   Once your Netlify site is generated, edit your GitHub repository's `gatsby-node.js` to include your own Netlify URL. This URL will be used for the Open Graph image URL.
+
+   You can make this change directly on GitHub using the edit button.
 
 If you want to make changes to the demo, clone your new repository to your machine and edit the code.
 
