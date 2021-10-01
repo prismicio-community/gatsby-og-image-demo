@@ -33,14 +33,20 @@ This repository is a companion to one of four talks shown during [Prismic][prism
 If you want to make changes to the demo, clone your new repository to your machine and edit the code.
 
 1. Clone your repository.
-2. Start the Gatsby development server.
+2. Install dependencies.
+
+   ```sh
+   npm install
+   ```
+
+3. Start the Gatsby development server.
 
    ```sh
    npm run develop
    ```
 
-3. Edit the templates. Each file includes a short description of its purpose.
-4. When you want to deploy your changes, commit your code. Netlify will rebuild your site once you push.
+4. Edit the templates. Each file includes a short description of its purpose.
+5. When you want to deploy your changes, commit your code. Netlify will rebuild your site once you push.
 
 Have fun generating your own Open Graph images! 😊
 
