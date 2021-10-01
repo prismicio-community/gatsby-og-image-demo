@@ -1,7 +1,6 @@
 /**
- * This file contains configuration for graphql-code-generator.
- * graphql-code-generator is used to provide TypeScript support for your app's
- * GraphQL queries.
+ * This file contains configuration for GraphQL Code Generator. GraphQL Code
+ * Generator is used to provide TypeScript support for your app's GraphQL queries.
  *
  * @see https://www.graphql-code-generator.com/
  */
@@ -39,7 +38,7 @@ module.exports = {
 		},
 	},
 
-	// Perform actions before and after `yarn gen` is executed.
+	// Perform actions before and after `npm run gen` is executed.
 	hooks: {
 		afterOneFileWrite: [
 			// This runs the generated file through Prettier to get nice formatting.
