@@ -6,6 +6,8 @@ When you share a link on social media platforms that support Open Graph, like Tw
 
 This repository is a companion to one of four talks shown during [Prismic][prismic]'s **Gatsby 4×4** presentation at [Jamstack Conf 2021][jamstackconf].
 
+[**Learn more on the Prismic blog**][prismic-blog]
+
 ![Gatsby 4×4 - How to generate social media card images with React and Tailwind to look cool on Twitter and impress people you don't even know](./poster.png)
 
 ## How to try this yourself
@@ -71,6 +73,7 @@ limitations under the License.
 <!-- Links -->
 
 [prismic]: https://prismic.io
+[prismic-blog]: https://prismic.io/blog
 [og]: https://ogp.me/
 [jamstackconf]: https://jamstackconf.com/
 [react]: https://reactjs.org/
